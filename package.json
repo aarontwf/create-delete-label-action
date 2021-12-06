@@ -1,0 +1,19 @@
+{
+  "name": "create-delete-label-action",
+  "version": "1.0.0",
+  "description": "Create or delete a label in a repository",
+  "main": "index.js",
+  "keywords": [],
+  "author": "Aaron Wilson <aarontwf@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "ncc build index.js -o lib -m"
+  },
+  "dependencies": {
+    "@actions/core": "^1.3.0",
+    "@actions/github": "^5.0.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.28.6"
+  }
+}

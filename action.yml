@@ -1,0 +1,22 @@
+name: "Create/Delete Label Action"
+description: "Create or delete a label in a repository"
+author: "Aaron Wilson <aarontwf@users.noreply.github.com>"
+runs:
+  using: "node12"
+  main: "lib/index.js"
+branding:
+  icon: "tag"
+  color: "white"
+inputs:
+  name:
+    description: "The name of the label to create/delete"
+    required: true
+  description:
+    description: "The description for the label"
+    required: false
+  color:
+    description: "Hex colour code for the label"
+    required: false
+  action:
+    description: "'create' or 'delete'"
+    required: true
