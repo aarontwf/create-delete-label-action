@@ -14,8 +14,7 @@ jobs:
     name: Create Label
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@1.0.0
-      - uses: aarontwf/create-delete-label-action@v1.0.0
+      - uses: aarontwf/create-delete-label-action@v1.0.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:

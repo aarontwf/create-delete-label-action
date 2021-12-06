@@ -1,6 +1,6 @@
 {
   "name": "create-delete-label-action",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create or delete a label in a repository",
   "main": "index.js",
   "keywords": [],

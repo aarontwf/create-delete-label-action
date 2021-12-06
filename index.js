@@ -22,15 +22,25 @@ async function run() {
             color: labelColor,
             description: labelDescription,
         };
-        console.log(`[Action] Creating Label: ${labelName}`);
-        await octokit.rest.issues.createLabel(params);
+
+        try {
+            console.log(`[Action] Creating Label: ${labelName}`);
+            await octokit.rest.issues.createLabel(params);
+        } catch (error) {
+            core.setFailed(error.message);
+        }
     } else if (action === "delete") {
         const params = {
             ...github.context.repo,
             name: labelName
         };
-        console.log(`[Action] Deleting Label: ${mod.label.name}`);
-        await octokit.rest.issues.deleteLabel(params);
+
+        try {
+            console.log(`[Action] Deleting Label: ${labelName}`);
+            await octokit.rest.issues.deleteLabel(params);
+        } catch (error) {
+            core.setFailed(error.message);
+        }
     } else {
       core.setFailed(`Unknown action type '${action}'. Please use 'create' or 'delete'.`);
     }
